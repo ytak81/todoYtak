@@ -6,13 +6,15 @@
 			<meta name="application name" content="ToDo">
 			<meta name="description" content="本体">
 			<meta name="author" content="Takeyama Yoshito">
-			<meta name="generator" content="VSCode"">
+			<meta name="generator" content="VSCode">
 			<meta name="keywords" content="JavaScript,LocalStorage">
-			<link rel="stylesheet" type="text/css" href="todo.css">
+			<link rel="stylesheet" type="text/css" href="todoV2.css">
 			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-      <script src="todo.js"></script>
+      <!-- Datepickerを日本語化する -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+      <script src="todoV2.js"></script>
     </head>
 		<body onload="viewStorage();">
       <section id="azone">
@@ -22,16 +24,16 @@
         <table id="table1">
           <tr>
             <th width="50px">
-            <th width="50px">順</th>
-            <th width="150px">期限</th>
-            <th width="300px">タスク名</th>
-            <th width="100px">状態</th>
-            <th width="50px"></th>
+            <th width="100px">開始日</th>
+            <th width="100px">期限</th>
+            <th width="200px">タスク名</th>
+            <th width="80px">状態</th>
+            <th width="100px">完了日</th>
             <th width="100px"><button id="btnDel" type="button">　削　除　</button></th>
           </tr>
           <tr>
             <td></td>
-            <td><input id="hno" type="text" size="2"></td>
+            <td><input id="hno" type="text" size="14"></td>
             <td><input id="hdate" size="14"></td>
             <td><input id="hname" type="text" size="40" maxlength="20"></td>
             <td>
@@ -42,17 +44,19 @@
                 <option value="4">完了</option>
               </select>
             </td>
+            <td><input id="hdatez" size="14"></td> 
+            <td></td>
           </tr>
         </table>
         <table id="table1a">
           <tr>
             <td width="50px"></td>
             <td width="50px"><h4 id="titlePlus">備考</h4></td>
-            <td width="400px"><textarea id="hmemo" name="memo" rows="3" cols="50"></textarea></td>
-            <td width="50px"></td>
-            <td width="100px"><button id="btn2" type="button">　追　加　</button></td>
-            <td width="50px"></td>
-            <td width="100px"><button id="btn1" type="button">　中　止　</button></td>
+            <td width="500px"><textarea id="hmemo" name="memo" rows="3" cols="80"></textarea></td>
+            <td width="30px"></td>
+            <td width="80px"><button id="btn2" type="button">　追　加　</button></td>
+            <td width="10px"></td>
+            <td width="80px"><button id="btn1" type="button">　中　止　</button></td>
           </tr>
         </table>
       </section>
@@ -61,15 +65,17 @@
         <table id="table2">
           <tr>
             <th width="50px">
-            <th width="50px">順</th>
-            <th width="120px">期限</th>
-            <th width="350px">タスク名</th>
+            <th width="80px">開始日</th>
+            <th width="80px">期限</th>
+            <th width="270px">タスク名</th>
             <th width="100px">状態</th>
+            <th width="80px">完了日</th>
             <th width="10px"></th>
             <th width="120px"><button id="btn3" type="button">完了一括削除</button></th>
           </tr>
           <tr class="task">
             <td class="same"></td>
+            <td class="bdr"></td>
             <td class="bdr"></td>
             <td class="bdr"></td>
             <td class="bdr"></td>

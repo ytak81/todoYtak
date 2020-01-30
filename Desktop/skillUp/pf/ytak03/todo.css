@@ -30,7 +30,7 @@ th {
 }
 
 #bzone {
-  background-color: turquoise;
+  background-color: white;
 }
 #ltitle {
   position: relative;
@@ -43,6 +43,18 @@ th {
   display: none;
 }
 .same {
-  color: turquoise;
+  color: white;
   font-size: 1px;
+}
+.sts1 {
+  background-color: white;
+}
+.sts2 {
+  background-color: lime;
+}
+.sts3 {
+  background-color: yellow;
+}
+.sts4 {
+  background-color: magenta;
 }
