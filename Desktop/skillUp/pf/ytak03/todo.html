@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+	<html lang="ja">
+		<head>
+			<meta charset="utf-8">
+			<title>ToDo</title>
+			<meta name="application name" content="ToDo">
+			<meta name="description" content="本体">
+			<meta name="author" content="Takeyama Yoshito">
+			<meta name="generator" content="VSCode"">
+			<meta name="keywords" content="JavaScript,LocalStorage">
+			<link rel="stylesheet" type="text/css" href="todo.css">
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+      <script src="todo.js"></script>
+    </head>
+		<body onload="viewStorage();">
+      <section id="azone">
+        <h4 id="today"></h4>
+        <h2 id="htitle">Todo</h2>
+        <h3 id="stitle">タスクの追加</h3></th>
+        <table id="table1">
+          <tr>
+            <th width="50px">
+            <th width="50px">順</th>
+            <th width="150px">期限</th>
+            <th width="300px">タスク名</th>
+            <th width="100px">状態</th>
+            <th width="50px"></th>
+            <th width="100px"><button id="btnDel" type="button">　削　除　</button></th>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input id="hno" type="text" size="2"></td>
+            <td><input id="hdate" size="14"></td>
+            <td><input id="hname" type="text" size="40" maxlength="20"></td>
+            <td>
+              <select id="hsts" name="status">
+                <option value="1">未</option>
+                <option value="2">作業中</option>
+                <option value="3">確認待ち</option>
+                <option value="4">完了</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <table id="table1a">
+          <tr>
+            <td width="50px"></td>
+            <td width="50px"><h4 id="titlePlus">備考</h4></td>
+            <td width="400px"><textarea id="hmemo" name="memo" rows="3" cols="50"></textarea></td>
+            <td width="50px"></td>
+            <td width="100px"><button id="btn2" type="button">　追　加　</button></td>
+            <td width="50px"></td>
+            <td width="100px"><button id="btn1" type="button">　中　止　</button></td>
+          </tr>
+        </table>
+      </section>
+      <section id="bzone">
+        <h3 id="ltitle">タスク一覧</h3>
+        <table id="table2">
+          <tr>
+            <th width="50px">
+            <th width="50px">順</th>
+            <th width="120px">期限</th>
+            <th width="350px">タスク名</th>
+            <th width="100px">状態</th>
+            <th width="10px"></th>
+            <th width="120px"><button id="btn3" type="button">完了一括削除</button></th>
+          </tr>
+          <tr class="task">
+            <td class="same"></td>
+            <td class="bdr"></td>
+            <td class="bdr"></td>
+            <td class="bdr"></td>
+            <td class="bdr"></td>
+            <td class="nondisp"></td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+		</body>
+	</html>

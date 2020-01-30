@@ -1,0 +1,48 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+}
+
+#azone {
+  position: relative;
+  background-color: white;
+}
+#today {
+  position: absolute;
+  width: 200px;
+  top: 0;   right: 0px;
+}
+#stitle {
+  position: relative;
+  left: 30px;
+}
+#table1 {
+  clear: both;
+}
+#titlePlus {
+  text-align: right;
+}
+th {
+  text-align: left;
+}
+#btnDel {
+  display: none;
+}
+
+#bzone {
+  background-color: turquoise;
+}
+#ltitle {
+  position: relative;
+  left: 30px;
+}
+.bdr {
+  border: 1px solid black;
+}
+.nondisp {
+  display: none;
+}
+.same {
+  color: turquoise;
+  font-size: 1px;
+}
